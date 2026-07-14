@@ -1,0 +1,93 @@
+import { Moon, Crown, Flower2, Flower, Brain } from "lucide-react";
+
+const services = [
+  {
+    title: "LUXURY FOOT\nREFLEXOLOGY",
+    desc: "Stimulates pressure points to improve circulation and promote overall wellness.",
+    icon: Flower,
+    img: "https://images.pexels.com/photos/5450893/pexels-photo-5450893.jpeg?auto=compress&cs=tinysrgb&w=500",
+  },
+  {
+    title: "STRESS RELIEF\nTHERAPY",
+    desc: "Reduces stress, relieves tension and brings deep relaxation.",
+    icon: Brain,
+    img: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=500",
+  },
+  {
+    title: "SLEEP WELLNESS\nTHERAPY",
+    desc: "Calms the mind, relaxes the body and supports better sleep naturally.",
+    icon: Moon,
+    img: "https://images.pexels.com/photos/3738361/pexels-photo-3738361.jpeg?auto=compress&cs=tinysrgb&w=500",
+  },
+  {
+    title: "VIP PRIVATE\nSUITES",
+    desc: "Exclusive private suites designed for privacy, comfort and luxury.",
+    icon: Crown,
+    img: "https://images.pexels.com/photos/3998014/pexels-photo-3998014.jpeg?auto=compress&cs=tinysrgb&w=500",
+  },
+  {
+    title: "PREMIUM RELAXATION\nEXPERIENCE",
+    desc: "A perfect blend of ambience, expert touch and luxury wellness care.",
+    icon: Flower2,
+    img: "https://images.pexels.com/photos/6621063/pexels-photo-6621063.jpeg?auto=compress&cs=tinysrgb&w=500",
+  },
+];
+
+export default function Services() {
+  return (
+    <section className="bg-[#0d0905] py-10 lg:py-12">
+      <div className="max-w-[1400px] mx-auto px-6">
+        {/* Heading */}
+        <div className="text-center mb-10">
+          <div className="text-[#c9a84c] text-[11px] font-bold tracking-[0.2em] uppercase mb-4">
+            OUR SERVICES
+          </div>
+          <h2 className="text-3xl md:text-4xl lg:text-[2.5rem] font-serif text-white leading-tight">
+            Wellness Therapies for Mind & Body
+          </h2>
+        </div>
+
+        {/* Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5 mb-10">
+          {services.map((s, i) => (
+            <div
+              key={i}
+              className="bg-[#120e0a] border border-[#2a251d] rounded-xl overflow-hidden flex flex-col group transition-all duration-300 hover:border-[#c9a84c]/50"
+            >
+              <div className="relative h-44 sm:h-40 overflow-hidden">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={s.img}
+                  alt={s.title.replace("\n", " ")}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+              </div>
+              <div className="p-5 flex flex-col flex-grow">
+                <div className="flex items-start gap-3 mb-4">
+                  <s.icon
+                    className="text-[#c9a84c] shrink-0 mt-0.5"
+                    size={22}
+                    strokeWidth={1.5}
+                  />
+                  <h3 className="text-[#c9a84c] text-xs sm:text-[11px] lg:text-[12px] font-bold tracking-wider leading-snug whitespace-pre-line uppercase">
+                    {s.title}
+                  </h3>
+                </div>
+                <p className="text-[#9ea3a8] text-sm sm:text-[12px] leading-relaxed">
+                  {s.desc}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* CTA */}
+        <div className="text-center">
+          <button className="bg-transparent border border-[#c9a84c] text-[#c9a84c] hover:bg-[#c9a84c] hover:text-[#0d0905] px-8 py-3.5 text-xs font-bold tracking-widest transition-colors rounded-sm uppercase">
+            VIEW ALL SERVICES
+          </button>
+        </div>
+      </div>
+    </section>
+  );
+}
