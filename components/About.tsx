@@ -11,7 +11,7 @@ export default function About() {
       (entries) => {
         entries.forEach((e) => {
           if (e.isIntersecting) {
-            e.target.querySelectorAll('.reveal').forEach((el) => {
+            e.target.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach((el) => {
               el.classList.add('visible');
             });
           }
@@ -32,7 +32,7 @@ export default function About() {
           <div className="w-full lg:w-1/2 reveal-left">
             <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden shadow-2xl">
               <Image
-                src="/OS 2.png"
+                src="/foot-pulse/OS 2.png"
                 alt="Foot Pulse Reflexology Reception"
                 fill
                 className="object-cover"
@@ -50,17 +50,17 @@ export default function About() {
               Personalized for You.
             </h2>
             
-            <p className="font-montserrat text-[#004d40]/80 text-lg font-normal leading-relaxed mb-6">
-              <span className="font-bold text-[#004d40]">FOOT PULSE REFLEXOLOGY</span> is a premium wellness destination dedicated to delivering world-class foot reflexology and relaxation therapies in a luxurious and peaceful environment.
+            <p className="font-montserrat text-black/80 text-lg font-normal leading-relaxed mb-6">
+              <span className="font-bold text-black">FOOT PULSE REFLEXOLOGY</span> is a premium wellness destination dedicated to delivering world-class foot reflexology and relaxation therapies in a luxurious and peaceful environment.
             </p>
             
-            <p className="font-montserrat text-[#004d40]/80 text-lg font-normal leading-relaxed mb-10">
+            <p className="font-montserrat text-black/80 text-lg font-normal leading-relaxed mb-10">
               Our mission is to help you escape the stress of everyday life and experience the healing power of touch, expert care and true relaxation.
             </p>
 
             <button
               onClick={() => { const el = document.querySelector('#contact'); if (el) el.scrollIntoView({ behavior: 'smooth' }); }}
-              className="px-8 py-4 bg-[#004d40] hover:bg-gold-500 text-cream hover:text-[#004d40] font-montserrat text-sm font-bold uppercase rounded-sm transition-all duration-300 shadow-xl hover:-translate-y-1"
+              className="px-8 py-4 bg-gold-600 hover:bg-gold-500 text-[#004d40] font-montserrat text-sm font-bold uppercase rounded-sm transition-all duration-300 shadow-xl hover:-translate-y-1"
             >
               KNOW MORE ABOUT US
             </button>

@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  basePath: '/foot-pulse',
   images: {
     remotePatterns: [
       {

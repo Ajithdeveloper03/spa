@@ -1,61 +1,32 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 const navItems = [
-  "HOME",
-  "ABOUT US",
-  "SERVICES",
-  "VIP SUITES",
-  "GALLERY",
-  "TESTIMONIALS",
-  "CONTACT",
+  "Home",
+  "About Us",
+  "Services",
+  "VIP Suites",
+  "Gallery",
+  "Testimonials",
+  "Contact",
 ];
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white/95 backdrop-blur-md shadow-sm" : "bg-transparent"
-      }`}
-    >
-      {/* Seamless header overlay with flawless mask-image fade */}
-      <div
-        className={`absolute top-0 left-0 w-full h-[150px] bg-white -z-10 pointer-events-none transition-opacity duration-300 ${
-          isScrolled ? "opacity-0" : "opacity-95"
-        }`}
-        style={{
-          maskImage: "linear-gradient(to bottom, black 30%, transparent 100%)",
-          WebkitMaskImage: "linear-gradient(to bottom, black 30%, transparent 100%)"
-        }}
-      ></div>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-[70px] relative z-10">
+    <nav className="absolute top-0 left-0 right-0 z-50 bg-transparent py-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-[80px] relative z-10">
         {/* Logo */}
         <div className="flex items-center shrink-0">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/logo.png"
+            src="/foot-pulse/logo.png"
             alt="Foot Pulse Reflexology"
-            className="h-14 w-auto object-contain relative z-10"
-            style={{ filter: "drop-shadow(0 0 10px rgba(255,255,255,0.8))" }}
+            className="h-14 sm:h-18 lg:h-22 w-auto object-contain brightness-0 invert drop-shadow-md relative z-10"
           />
         </div>
 
@@ -64,12 +35,8 @@ export default function Navbar() {
           {navItems.map((item) => (
             <a
               key={item}
-              href="#"
-              className={`text-xs font-semibold tracking-wider transition-colors relative z-10 ${
-                item === "HOME"
-                  ? "text-[#c9a84c] border-b-2 border-[#c9a84c] pb-0.5"
-                  : "text-gray-800 hover:text-[#c9a84c]"
-              }`}
+              href={`#${item.toLowerCase().replace(" ", "-")}`}
+              className={`text-sm font-semibold tracking-wide transition-colors relative z-10 text-cream hover:text-gold-400`}
             >
               {item}
             </a>
@@ -78,37 +45,42 @@ export default function Navbar() {
 
         {/* Right side */}
         <div className="flex items-center gap-3">
-          <button className="hidden sm:block border border-[#c9a84c] text-[#c9a84c] px-4 py-2 text-xs font-semibold tracking-widest hover:bg-[#c9a84c] hover:text-black transition-colors bg-white/50 backdrop-blur-sm rounded">
+          <button className="hidden sm:block border-2 border-gold-500 text-gold-400 px-5 py-2.5 text-xs font-bold tracking-widest hover:bg-gold-500 hover:text-[#004d40] transition-colors rounded-sm uppercase">
             BOOK APPOINTMENT
           </button>
           <button
-            className="lg:hidden text-gray-900"
+            className="lg:hidden text-cream p-1"
             onClick={() => setMobileOpen(!mobileOpen)}
           >
-            {mobileOpen ? <X size={22} /> : <Menu size={22} />}
+            {mobileOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
       </div>
 
       {/* Mobile Menu */}
-      {mobileOpen && (
-        <div className="lg:hidden bg-[#1a1008] border-t border-[#c9a84c]/20 px-6 py-4 flex flex-col gap-4">
+      <div
+        className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out bg-darkGreen-950/95 backdrop-blur-md absolute top-full left-0 w-full ${
+          mobileOpen ? "max-h-[400px] border-t border-gold-500/20" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="px-6 py-6 flex flex-col gap-5">
           {navItems.map((item) => (
             <a
               key={item}
-              href="#"
-              className={`text-sm font-semibold tracking-wider ${
-                item === "HOME" ? "text-[#c9a84c]" : "text-white/80"
+              href={`#${item.toLowerCase().replace(" ", "-")}`}
+              onClick={() => setMobileOpen(false)}
+              className={`text-sm font-bold tracking-wider ${
+                item === "HOME" ? "text-gold-400" : "text-cream/90"
               }`}
             >
               {item}
             </a>
           ))}
-          <button className="mt-2 border border-[#c9a84c] text-[#c9a84c] px-4 py-2 text-xs font-semibold tracking-widest">
+          <button className="mt-4 bg-gold-600 text-[#004d40] px-4 py-3 text-sm font-bold tracking-widest text-center rounded-sm">
             BOOK APPOINTMENT
           </button>
         </div>
-      )}
+      </div>
     </nav>
   );
 }

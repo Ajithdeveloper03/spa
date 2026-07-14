@@ -49,7 +49,7 @@ export default function Features() {
                   <h3 className="font-cormorant text-lg sm:text-xl font-bold text-[#004d40] uppercase mb-2 tracking-wide whitespace-pre-line">
                     {feature.title}
                   </h3>
-                  <p className="font-montserrat text-sm font-normal text-[#004d40]/80 leading-relaxed max-w-[200px] mx-auto">
+                  <p className="font-montserrat text-sm font-normal text-black/80 leading-relaxed max-w-[200px] mx-auto">
                     {feature.description}
                   </p>
                 </div>

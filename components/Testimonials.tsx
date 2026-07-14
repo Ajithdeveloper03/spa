@@ -31,6 +31,8 @@ const testimonials = [
   }
 ];
 
+const items = [...testimonials, ...testimonials, ...testimonials];
+
 export default function Testimonials() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const ref = useRef<HTMLDivElement>(null);
@@ -101,13 +103,13 @@ export default function Testimonials() {
                     ))}
                   </div>
 
-                  <p className="font-montserrat text-[#004d40]/80 text-lg md:text-xl font-normal leading-relaxed mb-8">
+                  <p className="font-montserrat text-black/80 text-lg md:text-xl font-normal leading-relaxed mb-8">
                     &ldquo;{t.quote}&rdquo;
                   </p>
 
                   <div className="w-12 h-px bg-gold-600/30 mb-6 mt-auto" />
 
-                  <p className="font-montserrat text-base text-[#004d40] font-bold uppercase tracking-wider">
+                  <p className="font-montserrat text-base text-black font-bold uppercase tracking-wider">
                     – {t.name}
                   </p>
                 </div>

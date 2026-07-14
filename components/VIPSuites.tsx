@@ -12,7 +12,7 @@ export default function VIPSuites() {
       (entries) => {
         entries.forEach((e) => {
           if (e.isIntersecting) {
-            e.target.querySelectorAll('.reveal').forEach((el) => {
+            e.target.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach((el) => {
               el.classList.add('visible');
             });
           }
@@ -33,7 +33,7 @@ export default function VIPSuites() {
           <div className="w-full lg:w-1/2 reveal-left">
             <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden shadow-xl">
               <Image
-                src="/OS 4.png"
+                src="/foot-pulse/OS 4.png"
                 alt="VIP Wellness Suite"
                 fill
                 className="object-cover"
@@ -50,26 +50,26 @@ export default function VIPSuites() {
               Exclusive VIP Wellness Suites
             </h2>
             
-            <p className="font-montserrat text-[#004d40]/80 text-lg font-normal leading-relaxed mb-8 max-w-lg">
+            <p className="font-montserrat text-black/80 text-lg font-normal leading-relaxed mb-8 max-w-lg">
               Step into a world of privacy, comfort and luxury. Our VIP suites are thoughtfully designed to give you a peaceful and uninterrupted relaxation experience.
             </p>
  <div className="grid grid-cols-3 gap-4 pb-6">
               <div className="flex flex-col items-center text-center gap-3">
                 <Lock className="w-8 h-8 text-gold-600 mb-2" strokeWidth={2.5} />
-                <span className="font-montserrat text-sm font-medium text-[#004d40] uppercase">Complete Privacy</span>
+                <span className="font-montserrat text-sm font-medium text-black uppercase">Complete Privacy</span>
               </div>
               <div className="flex flex-col items-center text-center gap-3">
                 <Sparkles className="w-8 h-8 text-gold-600 mb-2" strokeWidth={2.5} />
-                <span className="font-montserrat text-sm font-medium text-[#004d40] uppercase">Premium Ambience</span>
+                <span className="font-montserrat text-sm font-medium text-black uppercase">Premium Ambience</span>
               </div>
               <div className="flex flex-col items-center text-center gap-3">
                 <User className="w-8 h-8 text-gold-600 mb-2" strokeWidth={2.5} />
-                <span className="font-montserrat text-sm font-medium text-[#004d40] uppercase">Personalized Care</span>
+                <span className="font-montserrat text-sm font-medium text-black uppercase">Personalized Care</span>
               </div>
             </div>
             <button
               onClick={() => { const el = document.querySelector('#contact'); if (el) el.scrollIntoView({ behavior: 'smooth' }); }}
-              className="px-8 py-4 bg-[#004d40] hover:bg-gold-500 text-cream hover:text-[#004d40] font-montserrat text-sm font-medium uppercase rounded-sm transition-all duration-300 shadow-lg hover:-translate-y-1 mt-6"
+              className="px-8 py-4 bg-gold-600 hover:bg-gold-500 text-[#004d40] font-montserrat text-sm font-medium uppercase rounded-sm transition-all duration-300 shadow-lg hover:-translate-y-1 mt-6"
             >
               EXPLORE VIP SUITES
             </button>

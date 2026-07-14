@@ -5,33 +5,33 @@ import Image from 'next/image';
 
 const services = [
   {
-    title: 'FOOT\nREFLEXOLOGY',
-    description: 'Stimulates pressure points to improve circulation and promote overall wellness.',
-    image: '/OS 1.jpg',
+    title: 'PREMIUM\nRELAXATION',
+    description: 'A perfect blend of ambience, expert touch and luxury wellness care.',
+    image: '/foot-pulse/OS 1.jpg',
+    icon: '❀'
+  },
+  {
+    title: 'STRESS RELIEF\nREFLEXOLOGY',
+    description: 'Deep pressure therapy to release stress and rejuvenate body energy.',
+    image: '/foot-pulse/OS 2.png',
     icon: '✦'
   },
   {
-    title: 'STRESS RELIEF\nTHERAPY',
-    description: 'Reduces stress, relieves tension and brings deep relaxation.',
-    image: '/OS 2.png',
-    icon: '❁'
+    title: 'DEEP TISSUE\nRESTORATION',
+    description: 'Focuses on realigning deep layers of muscles and connective tissue.',
+    image: '/foot-pulse/OS 3.png',
+    icon: '❂'
   },
   {
-    title: 'SLEEP WELLNESS\nTHERAPY',
-    description: 'Calms the mind, relaxes the body and supports better sleep naturally.',
-    image: '/OS 3.png',
-    icon: '☾'
-  },
-  {
-    title: 'VIP PRIVATE\nSUITES',
-    description: 'Exclusive private suites designed for privacy, comfort and luxury.',
-    image: '/OS 4.png',
-    icon: '♔'
+    title: 'VIP SUITES\nEXPERIENCE',
+    description: 'Exclusive private suites with customized spa wellness treatments.',
+    image: '/foot-pulse/OS 4.png',
+    icon: '❀'
   },
   {
     title: 'PREMIUM\nRELAXATION',
     description: 'A perfect blend of ambience, expert touch and luxury wellness care.',
-    image: '/OS 1.jpg',
+    image: '/foot-pulse/OS 1.jpg',
     icon: '❀'
   }
 ];
@@ -104,7 +104,7 @@ export default function Services() {
 
         {/* View All Button */}
         <div className="flex justify-center mt-10 reveal delay-500">
-          <button className="px-8 py-4 bg-gold-600 text-white hover:bg-gold-500 hover:text-white">
+          <button className="px-8 py-4 border-2 border-gold-500/50 text-gold-400 font-montserrat text-sm font-bold uppercase rounded-sm transition-all duration-300 hover:bg-gold-500/10 hover:border-gold-500">
             VIEW ALL SERVICES
           </button>
         </div>
