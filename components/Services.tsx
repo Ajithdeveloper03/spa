@@ -29,7 +29,7 @@ const services = [
     title: "PREMIUM RELAXATION\nEXPERIENCE",
     desc: "A perfect blend of ambience, expert touch and luxury wellness care.",
     icon: Flower2,
-    img: "https://images.pexels.com/photos/6621063/pexels-photo-6621063.jpeg?auto=compress&cs=tinysrgb&w=500",
+    img: "/OS 5.png",
   },
 ];
 
@@ -52,7 +52,7 @@ export default function Services() {
           {services.map((s, i) => (
             <div
               key={i}
-              className="bg-[#120e0a] border border-[#2a251d] rounded-xl overflow-hidden flex flex-col group transition-all duration-300 hover:border-[#c9a84c]/50"
+              className="bg-[#120e0a] border border-[#2a251d] rounded-xl overflow-hidden flex flex-col group transition-all duration-300 hover:border-[#0d370e]/50"
             >
               <div className="relative h-44 sm:h-40 overflow-hidden">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -83,7 +83,7 @@ export default function Services() {
 
         {/* CTA */}
         <div className="text-center">
-          <button className="bg-transparent border border-[#c9a84c] text-[#c9a84c] hover:bg-[#c9a84c] hover:text-[#0d0905] px-8 py-3.5 text-xs font-bold tracking-widest transition-colors rounded-sm uppercase">
+          <button className="bg-transparent border border-[#c9a84c] text-[#c9a84c] hover:bg-[#0d370e] hover:border-[#0d370e] hover:text-white px-8 py-3.5 text-xs font-bold tracking-widest transition-colors rounded-sm uppercase">
             VIEW ALL SERVICES
           </button>
         </div>

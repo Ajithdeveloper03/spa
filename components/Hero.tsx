@@ -49,7 +49,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-10 pb-24 pt-44">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-10 pb-24 pt-32 sm:pt-44">
         <div className="max-w-2xl">
           <h1 className="text-4xl sm:text-5xl md:text-[3.5rem] font-serif text-[#1a1a1a] leading-tight mb-4 flex flex-col items-start">
             <span>Relax</span>
@@ -77,17 +77,17 @@ export default function Hero() {
           <hr className="border-gray-200 mb-8 max-w-[32rem]" />
 
           {/* Badges */}
-          <div className="flex flex-wrap items-center gap-4 mb-10">
+          <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-3 sm:gap-4 mb-10">
             <div className="flex items-center gap-2 text-gray-800 text-sm sm:text-base font-medium">
               <Shield size={18} className="text-[#c9a84c]" />
               <span>Relieve Stress</span>
             </div>
-            <span className="text-gray-300">•</span>
+            <span className="hidden sm:inline text-gray-300">•</span>
             <div className="flex items-center gap-2 text-gray-800 text-sm sm:text-base font-medium">
               <Moon size={18} className="text-[#c9a84c]" />
               <span>Improve Sleep</span>
             </div>
-            <span className="text-gray-300">•</span>
+            <span className="hidden sm:inline text-gray-300">•</span>
             <div className="flex items-center gap-2 text-gray-800 text-sm sm:text-base font-medium">
               <Zap size={18} className="text-[#c9a84c]" />
               <span>Restore Energy</span>
@@ -95,12 +95,12 @@ export default function Hero() {
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-wrap gap-4">
-            <button className="flex items-center gap-2 bg-[#c9a84c] hover:bg-[#b8943d] text-black font-semibold px-6 py-3 rounded text-sm tracking-wider transition-colors">
+          <div className="flex flex-col sm:flex-row gap-4">
+            <button className="flex items-center justify-center gap-2 bg-[#c9a84c] hover:bg-[#0d370e] hover:text-white text-black font-semibold px-6 py-3.5 rounded text-sm tracking-wider transition-colors w-full sm:w-auto">
               <span>BOOK APPOINTMENT</span>
               <Calendar size={18} />
             </button>
-            <button className="flex items-center gap-2 border border-[#c9a84c] hover:bg-[#c9a84c]/10 text-gray-900 font-semibold px-6 py-3 rounded text-sm tracking-wider transition-colors">
+            <button className="flex items-center justify-center gap-2 border border-[#c9a84c] hover:bg-[#0d370e] hover:border-[#0d370e] hover:text-white text-gray-900 font-semibold px-6 py-3.5 rounded text-sm tracking-wider transition-colors w-full sm:w-auto">
               <span>WHATSAPP US</span>
               <MessageCircle size={18} className="text-[#c9a84c]" />
             </button>

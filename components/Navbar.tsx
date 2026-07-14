@@ -67,8 +67,8 @@ export default function Navbar() {
               href="#"
               className={`text-xs font-semibold tracking-wider transition-colors relative z-10 ${
                 item === "HOME"
-                  ? "text-[#c9a84c] border-b-2 border-[#c9a84c] pb-0.5"
-                  : "text-gray-800 hover:text-[#c9a84c]"
+                  ? "text-[#0d370e] border-b-2 border-[#0d370e] pb-0.5"
+                  : "text-gray-800 hover:text-[#0d370e]"
               }`}
             >
               {item}
@@ -78,7 +78,7 @@ export default function Navbar() {
 
         {/* Right side */}
         <div className="flex items-center gap-3">
-          <button className="hidden sm:block border border-[#c9a84c] text-[#c9a84c] px-4 py-2 text-xs font-semibold tracking-widest hover:bg-[#c9a84c] hover:text-black transition-colors bg-white/50 backdrop-blur-sm rounded">
+          <button className="hidden sm:block border border-[#c9a84c] text-[#c9a84c] px-4 py-2 text-xs font-semibold tracking-widest hover:bg-[#0d370e] hover:border-[#0d370e] hover:text-white transition-colors bg-white/50 backdrop-blur-sm rounded">
             BOOK APPOINTMENT
           </button>
           <button
@@ -92,7 +92,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="lg:hidden bg-[#1a1008] border-t border-[#c9a84c]/20 px-6 py-4 flex flex-col gap-4">
+        <div className="lg:hidden absolute top-full left-0 w-full bg-[#1a1008] border-t border-[#c9a84c]/20 px-6 py-4 flex flex-col gap-4 shadow-lg">
           {navItems.map((item) => (
             <a
               key={item}
@@ -104,7 +104,7 @@ export default function Navbar() {
               {item}
             </a>
           ))}
-          <button className="mt-2 border border-[#c9a84c] text-[#c9a84c] px-4 py-2 text-xs font-semibold tracking-widest">
+          <button className="mt-2 border border-[#c9a84c] text-[#c9a84c] px-4 py-2 text-xs font-semibold tracking-widest text-center">
             BOOK APPOINTMENT
           </button>
         </div>

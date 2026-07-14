@@ -9,7 +9,7 @@ export default function VIPSuites() {
           <div className="lg:w-[35%] w-full h-[300px] lg:h-auto relative">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="https://images.pexels.com/photos/3998014/pexels-photo-3998014.jpeg?auto=compress&cs=tinysrgb&w=900"
+              src="/vip.png"
               alt="VIP Suite"
               className="w-full h-full object-cover lg:absolute lg:inset-0"
             />
@@ -31,14 +31,14 @@ export default function VIPSuites() {
                   are thoughtfully designed to give you a peaceful and
                   uninterrupted relaxation experience.
                 </p>
-                <button className="bg-[#c9a84c] hover:bg-[#b8943d] text-black px-6 py-3 text-xs font-bold uppercase tracking-wider rounded-sm transition-colors">
+                <button className="bg-[#c9a84c] hover:bg-[#0d370e] hover:text-white text-black px-6 py-3 text-xs font-bold uppercase tracking-wider rounded-sm transition-colors">
                   EXPLORE VIP SUITES
                 </button>
               </div>
 
               {/* Icons block */}
-              <div className="flex items-start shrink-0 xl:border-l border-[#e8e4d9] xl:pl-8 mt-10 xl:mt-0">
-                <div className="flex flex-col items-center pr-6 xl:pr-8 border-r border-[#e8e4d9]">
+              <div className="grid grid-cols-3 w-full xl:w-auto shrink-0 xl:border-l border-[#e8e4d9] xl:pl-8 mt-10 xl:mt-0 divide-x divide-[#e8e4d9]">
+                <div className="flex flex-col items-center justify-start px-2 sm:px-6 xl:px-8">
                   <Lock className="text-[#c9a84c] mb-3" size={28} strokeWidth={1.25} />
                   <span className="text-xs text-center text-gray-800">
                     Complete
@@ -46,7 +46,7 @@ export default function VIPSuites() {
                     Privacy
                   </span>
                 </div>
-                <div className="flex flex-col items-center px-6 xl:px-8 border-r border-[#e8e4d9]">
+                <div className="flex flex-col items-center justify-start px-2 sm:px-6 xl:px-8">
                   <Star className="text-[#c9a84c] mb-3" size={28} strokeWidth={1.25} />
                   <span className="text-xs text-center text-gray-800">
                     Premium
@@ -54,7 +54,7 @@ export default function VIPSuites() {
                     Ambience
                   </span>
                 </div>
-                <div className="flex flex-col items-center pl-6 xl:pl-8">
+                <div className="flex flex-col items-center justify-start px-2 sm:px-6 xl:px-8">
                   <User className="text-[#c9a84c] mb-3" size={28} strokeWidth={1.25} />
                   <span className="text-xs text-center text-gray-800">
                     Personalized

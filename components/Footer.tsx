@@ -56,7 +56,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <button className="flex items-center gap-2 bg-[#d6a54a] hover:bg-[#c29542] text-black px-8 py-3.5 text-xs font-bold tracking-widest uppercase rounded-sm transition-colors">
+          <button className="flex items-center gap-2 bg-[#d6a54a] hover:bg-[#0d370e] hover:text-white text-black px-8 py-3.5 text-xs font-bold tracking-widest uppercase rounded-sm transition-colors">
             <span>BOOK APPOINTMENT NOW</span>
             <ChevronRight size={16} strokeWidth={2.5} />
           </button>
@@ -86,11 +86,11 @@ export default function Footer() {
                   <a
                     key={i}
                     href="#"
-                    className="w-9 h-9 rounded-full border border-[#c9a84c]/30 flex items-center justify-center hover:bg-[#c9a84c] transition-colors group"
+                    className="w-9 h-9 rounded-full border border-[#c9a84c]/30 flex items-center justify-center hover:bg-[#0d370e] hover:border-[#0d370e] transition-colors group"
                   >
                     <Icon
                       size={15}
-                      className="text-[#c9a84c] group-hover:text-black"
+                      className="text-[#c9a84c] group-hover:text-white"
                     />
                   </a>
                 ))}
@@ -114,7 +114,7 @@ export default function Footer() {
                   <li key={l}>
                     <a
                       href="#"
-                      className="text-white/55 hover:text-[#c9a84c] text-sm transition-colors"
+                      className="text-white/55 hover:text-[#0d370e] text-sm transition-colors"
                     >
                       {l}
                     </a>
@@ -140,7 +140,7 @@ export default function Footer() {
                   <li key={l}>
                     <a
                       href="#"
-                      className="text-white/55 hover:text-[#c9a84c] text-sm transition-colors"
+                      className="text-white/55 hover:text-[#0d370e] text-sm transition-colors"
                     >
                       {l}
                     </a>
