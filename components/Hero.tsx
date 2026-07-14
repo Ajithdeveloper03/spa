@@ -96,11 +96,11 @@ export default function Hero() {
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap gap-4">
-            <button className="flex items-center gap-2 bg-[#c9a84c] hover:bg-[#b8943d] text-black font-semibold px-6 py-3 rounded text-sm tracking-wider transition-colors">
+            <button className="flex items-center gap-2 bg-[#c9a84c] hover:bg-[#b8943d] text-white font-semibold px-6 py-3 rounded text-sm tracking-wider transition-colors">
               <span>BOOK APPOINTMENT</span>
               <Calendar size={18} />
             </button>
-            <button className="flex items-center gap-2 border border-[#c9a84c] hover:bg-[#c9a84c]/10 text-gray-900 font-semibold px-6 py-3 rounded text-sm tracking-wider transition-colors">
+            <button className="flex items-center gap-2 bg-[#c9a84c] hover:bg-[#b8943d] text-white border border-transparent font-semibold px-6 py-3 rounded text-sm tracking-wider transition-colors">
               <span>WHATSAPP US</span>
               <MessageCircle size={18} className="text-[#c9a84c]" />
             </button>

@@ -1,92 +1,114 @@
-import { Moon, Crown, Flower2, Flower, Brain } from "lucide-react";
+'use client';
+
+import { useEffect, useRef } from 'react';
+import Image from 'next/image';
 
 const services = [
   {
-    title: "LUXURY FOOT\nREFLEXOLOGY",
-    desc: "Stimulates pressure points to improve circulation and promote overall wellness.",
-    icon: Flower,
-    img: "/OS 1.jpg",
+    title: 'FOOT\nREFLEXOLOGY',
+    description: 'Stimulates pressure points to improve circulation and promote overall wellness.',
+    image: '/OS 1.jpg',
+    icon: '✦'
   },
   {
-    title: "STRESS RELIEF\nTHERAPY",
-    desc: "Reduces stress, relieves tension and brings deep relaxation.",
-    icon: Brain,
-    img: "/OS 2.png",
+    title: 'STRESS RELIEF\nTHERAPY',
+    description: 'Reduces stress, relieves tension and brings deep relaxation.',
+    image: '/OS 2.png',
+    icon: '❁'
   },
   {
-    title: "SLEEP WELLNESS\nTHERAPY",
-    desc: "Calms the mind, relaxes the body and supports better sleep naturally.",
-    icon: Moon,
-    img: "/OS 3.png",
+    title: 'SLEEP WELLNESS\nTHERAPY',
+    description: 'Calms the mind, relaxes the body and supports better sleep naturally.',
+    image: '/OS 3.png',
+    icon: '☾'
   },
   {
-    title: "VIP PRIVATE\nSUITES",
-    desc: "Exclusive private suites designed for privacy, comfort and luxury.",
-    icon: Crown,
-    img: "/OS 4.png",
+    title: 'VIP PRIVATE\nSUITES',
+    description: 'Exclusive private suites designed for privacy, comfort and luxury.',
+    image: '/OS 4.png',
+    icon: '♔'
   },
   {
-    title: "PREMIUM RELAXATION\nEXPERIENCE",
-    desc: "A perfect blend of ambience, expert touch and luxury wellness care.",
-    icon: Flower2,
-    img: "https://images.pexels.com/photos/6621063/pexels-photo-6621063.jpeg?auto=compress&cs=tinysrgb&w=500",
-  },
+    title: 'PREMIUM\nRELAXATION',
+    description: 'A perfect blend of ambience, expert touch and luxury wellness care.',
+    image: '/OS 1.jpg',
+    icon: '❀'
+  }
 ];
 
 export default function Services() {
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.querySelectorAll('.reveal').forEach((el) => {
+              el.classList.add('visible');
+            });
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className="bg-[#0d0905] py-10 lg:py-12">
-      <div className="max-w-[1400px] mx-auto px-6">
-        {/* Heading */}
-        <div className="text-center mb-10">
-          <div className="text-[#c9a84c] text-[11px] font-bold tracking-[0.2em] uppercase mb-4">
+    <section id="services" ref={ref} className="w-full bg-darkGreen-900 py-10 lg:py-16 overflow-hidden border-t border-darkGreen-800">
+      <div className="w-full max-w-[1400px] px-4 sm:px-6 lg:px-12 mx-auto">
+        
+        {/* Header */}
+        <div className="text-center mb-12 reveal">
+          <h4 className="font-montserrat text-gold-500 text-sm font-bold uppercase mb-4">
             OUR SERVICES
-          </div>
-          <h2 className="text-3xl md:text-4xl lg:text-[2.5rem] font-serif text-white leading-tight">
+          </h4>
+          <h2 className="font-cormorant text-3xl md:text-5xl text-cream font-bold">
             Wellness Therapies for Mind & Body
           </h2>
+          <div className="w-24 h-px bg-gold-500/50 mx-auto mt-6" />
         </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5 mb-10">
-          {services.map((s, i) => (
-            <div
-              key={i}
-              className="bg-[#120e0a] border border-[#2a251d] rounded-xl overflow-hidden flex flex-col group transition-all duration-300 hover:border-[#c9a84c]/50"
+        {/* Services Grid (Horizontal scrollable on mobile, grid on desktop) */}
+        <div className="flex overflow-x-auto pb-4 -mx-4 px-4 sm:-mx-6 sm:px-6 lg:mx-0 lg:px-0 lg:grid lg:grid-cols-5 gap-4 sm:gap-6 snap-x snap-mandatory hide-scrollbar">
+          {services.map((service, idx) => (
+            <div 
+              key={idx} 
+              className="flex-none w-[calc(100vw-3rem)] sm:w-[280px] lg:w-auto snap-center snap-always reveal delay-100 group cursor-pointer"
+              style={{ transitionDelay: `${idx * 100}ms` }}
             >
-              <div className="relative h-44 sm:h-40 overflow-hidden">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={s.img}
-                  alt={s.title.replace("\n", " ")}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden mb-6 border border-darkGreen-800">
+                <Image
+                  src={service.image}
+                  alt={service.title}
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
+                {/* <div className="absolute inset-0 bg-[#004d40]/50 group-hover:bg-[#004d40]/20 transition-colors duration-500" /> */}
               </div>
-              <div className="p-5 flex flex-col flex-grow">
-                <div className="flex items-start gap-3 mb-4">
-                  <s.icon
-                    className="text-[#c9a84c] shrink-0 mt-0.5"
-                    size={22}
-                    strokeWidth={1.5}
-                  />
-                  <h3 className="text-[#c9a84c] text-xs sm:text-[11px] lg:text-[12px] font-bold tracking-wider leading-snug whitespace-pre-line uppercase">
-                    {s.title}
-                  </h3>
-                </div>
-                <p className="text-[#9ea3a8] text-sm sm:text-[12px] leading-relaxed">
-                  {s.desc}
+              
+              <div className="text-center px-2">
+                <div className="text-gold-500 text-3xl mb-4">{service.icon}</div>
+                <h3 className="font-cormorant text-lg sm:text-xl font-bold text-cream uppercase line-clamp-2 mb-2 group-hover:text-gold-400 transition-colors whitespace-pre-line">
+                  {service.title}
+                </h3>
+                <p className="font-montserrat text-base font-normal text-cream/70 leading-relaxed group-hover:text-cream/90 transition-colors">
+                  {service.description}
                 </p>
               </div>
             </div>
           ))}
         </div>
 
-        {/* CTA */}
-        <div className="text-center">
-          <button className="bg-transparent border border-[#c9a84c] text-[#c9a84c] hover:bg-[#c9a84c] hover:text-[#0d0905] px-8 py-3.5 text-xs font-bold tracking-widest transition-colors rounded-sm uppercase">
+        {/* View All Button */}
+        <div className="flex justify-center mt-10 reveal delay-500">
+          <button className="px-8 py-4 bg-gold-600 text-white hover:bg-gold-500 hover:text-white">
             VIEW ALL SERVICES
           </button>
         </div>
+
       </div>
     </section>
   );
