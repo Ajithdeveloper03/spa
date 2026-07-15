@@ -35,7 +35,7 @@ export default function Testimonials() {
   useEffect(() => {
     const timer = setInterval(() => {
       handleNext();
-    }, 5000); // 5 seconds per slide
+    }, 4000); // 4 seconds per slide
     return () => clearInterval(timer);
   }, [currentIndex]);
 
@@ -96,7 +96,7 @@ export default function Testimonials() {
           </button>
 
           <div 
-            className={`flex ${isTransitioning ? 'transition-transform duration-500 ease-in-out' : ''}`}
+            className={`flex ${isTransitioning ? 'transition-transform duration-1000 ease-in-out' : ''}`}
             style={{ transform: `translateX(-${(currentIndex / items.length) * 100}%)` }}
             onTransitionEnd={handleTransitionEnd}
           >
@@ -117,7 +117,7 @@ export default function Testimonials() {
                     ))}
                   </div>
                   <p className="text-gray-800 text-[13px] sm:text-sm leading-relaxed text-center mb-4 flex-grow">
-                    "{t.text}"
+                    &quot;{t.text}&quot;
                   </p>
                   <div className="text-gray-600 text-[13px] sm:text-sm font-semibold">
                     - {t.name}

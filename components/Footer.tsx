@@ -15,6 +15,21 @@ import {
 export default function Footer() {
   return (
     <>
+      {/* Journey to Wellness Section */}
+      <section className="bg-[#120e0a] py-16 lg:py-20 text-center px-6">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-serif text-white mb-6">
+            Your Journey to Wellness Starts Here
+          </h2>
+          <p className="text-white/70 text-sm md:text-base leading-relaxed mb-8">
+            Step into FOOT PULSE Wellness & Reflexology and discover a place where professional care, comfort, and relaxation come together. Let us help you feel lighter, calmer, and revitalized — one step at a time. Book your appointment today and experience the healing touch of FOOT PULSE.
+          </p>
+          <button className="bg-[#c9a84c] hover:bg-[#0d370e] hover:text-white text-black px-8 py-3.5 text-xs font-bold tracking-widest uppercase rounded-sm transition-colors">
+            BOOK YOUR APPOINTMENT TODAY
+          </button>
+        </div>
+      </section>
+
       {/* CTA Bar */}
       <section className="bg-[#0a0805] py-6 border-b border-[#2a251d]">
         <div className="max-w-[1400px] mx-auto px-6 flex flex-col lg:flex-row items-center justify-between gap-8">
@@ -72,7 +87,7 @@ export default function Footer() {
               <div className="flex items-center mb-4 bg-white/90 p-2 rounded-lg w-fit">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/logo.png"
+                  src="./logo.png"
                   alt="Foot Pulse Reflexology"
                   className="h-10 w-auto object-contain"
                 />
@@ -114,7 +129,7 @@ export default function Footer() {
                   <li key={l}>
                     <a
                       href="#"
-                      className="text-white/55 hover:text-[#0d370e] text-sm transition-colors"
+                      className="text-white/55 hover:text-white text-sm transition-colors"
                     >
                       {l}
                     </a>
@@ -140,7 +155,7 @@ export default function Footer() {
                   <li key={l}>
                     <a
                       href="#"
-                      className="text-white/55 hover:text-[#0d370e] text-sm transition-colors"
+                      className="text-white/55 hover:text-white text-sm transition-colors"
                     >
                       {l}
                     </a>

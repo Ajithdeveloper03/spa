@@ -15,32 +15,19 @@ export default function AboutUs() {
           <div className="relative rounded shadow-md overflow-hidden h-[300px] sm:h-[400px] lg:h-auto">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/ABOUT US.png"
+              src="./ABOUT%20US.png"
               alt="Luxury Spa Foot Reflexology"
               className="w-full h-full object-cover lg:absolute lg:inset-0"
             />
           </div>
 
           {/* Text Content */}
-          <div className="pr-4 lg:pr-12 flex flex-col justify-center">
-            <h3 className="text-[#c9a84c] text-sm font-bold tracking-wider mb-4 uppercase">
-              ABOUT US
-            </h3>
-            <h2 className="text-4xl md:text-[2.75rem] font-serif text-[#1a1a1a] leading-tight mb-8">
-              Premium Wellness.
-              <br />
-              Personalized for You.
+          <div className="pr-4 lg:pr-12 flex flex-col justify-center items-start">
+            <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-serif text-[#1a1a1a] mb-6 leading-tight">
+              About Us
             </h2>
-            <div className="text-gray-700 text-sm md:text-[15px] leading-relaxed space-y-6 mb-8 max-w-lg">
-              <p>
-                FOOT PULSE REFLEXOLOGY is a premium wellness destination dedicated
-                to delivering world-class foot reflexology and relaxation therapies in a
-                luxurious and peaceful environment.
-              </p>
-              <p>
-                Our mission is to help you escape the stress of everyday life and
-                experience the healing power of touch, expert care and true relaxation.
-              </p>
+            <div className="text-gray-700 text-sm md:text-[16px] leading-relaxed mb-8 max-w-xl font-medium text-[#1a1a1a]">
+              Welcome to FOOT PULSE Wellness & Reflexology, where relaxation meets professional care. Our expertly trained therapists combine the art of reflexology with a calm, luxurious environment to help you unwind, recharge, and restore balance. Whether you're seeking relief from everyday stress, tired feet, muscle tension, or simply looking for a peaceful escape, FOOT PULSE offers a personalized wellness experience designed around your comfort and well-being.
             </div>
             
             <button className="bg-black hover:bg-[#0d370e] text-white px-8 py-3.5 text-xs font-bold tracking-wider uppercase transition-colors rounded-sm">

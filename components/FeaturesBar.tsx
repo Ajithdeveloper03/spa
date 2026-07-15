@@ -16,19 +16,20 @@ const YogaIcon = ({ size, className, strokeWidth = 1 }: { size: number, classNam
 );
 
 const features = [
-  { icon: HandHeart, title: "EXPERT THERAPISTS", desc: "Trained professionals with years of experience in reflexology." },
-  { icon: ShieldCheck, title: "HYGIENIC & SAFE", desc: "Clean, sanitized and well-maintained environment." },
-  { icon: Flower2, title: "PREMIUM AMBIENCE", desc: "Soothing interiors designed for your complete relaxation." },
-  { icon: DoorOpen, title: "EXCLUSIVE VIP SUITES", desc: "Private suites for the ultimate luxury experience." },
-  { icon: Leaf, title: "NATURAL WELLNESS", desc: "Holistic therapies that promote healing and well-being." },
-  { icon: YogaIcon, title: "TOTAL RELAXATION", desc: "Refresh your mind, body and soul in a peaceful space." },
+  { icon: HandHeart, title: "EXPERT THERAPISTS", desc: "Professionally Trained Reflexology Therapists" },
+  { icon: Flower2, title: "PREMIUM WELLNESS", desc: "Premium Wellness Experience" },
+  { icon: HandHeart, title: "COUPLES SUITE", desc: "Exclusive Couples Therapy Suite" },
+  { icon: DoorOpen, title: "VIP SUITE", desc: "Private VIP Therapy Suite" },
+  { icon: ShieldCheck, title: "CLEAN & SAFE", desc: "Clean, Hygienic & Comfortable Environment" },
+  { icon: Leaf, title: "CONVENIENT LOCATIONS", desc: "Convenient Locations in Mylapore & T. Nagar" },
+  { icon: YogaIcon, title: "EASY BOOKING", desc: "Easy Online Booking & Digital Payments" },
 ];
 
 export default function FeaturesBar() {
   return (
     <section className="bg-[#fcfaf7] border-y border-[#e8e4d9]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 md:py-8">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 lg:divide-x divide-[#e8e4d9] gap-y-10 lg:gap-y-0">
+        <div className="flex flex-wrap justify-center gap-y-10 gap-x-4 lg:gap-x-0 lg:divide-x divide-[#e8e4d9]">
           {features.map((f, i) => (
             <div
               key={i}

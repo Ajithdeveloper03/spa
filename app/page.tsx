@@ -1,9 +1,9 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import FeaturesBar from "@/components/FeaturesBar";
 import AboutUs from "@/components/AboutUs";
 import Services from "@/components/Services";
 import VIPSuites from "@/components/VIPSuites";
+import ExperienceTogether from "@/components/ExperienceTogether";
 import Testimonials from "@/components/Testimonials";
 import Footer from "@/components/Footer";
 
@@ -13,10 +13,10 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <FeaturesBar />
         <AboutUs />
         <Services />
         <VIPSuites />
+        <ExperienceTogether />
         <Testimonials />
         <Footer />
       </main>

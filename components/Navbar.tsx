@@ -52,7 +52,7 @@ export default function Navbar() {
         <div className="flex items-center shrink-0">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/logo.png"
+            src="./logo.png"
             alt="Foot Pulse Reflexology"
             className="h-14 w-auto object-contain relative z-10"
             style={{ filter: "drop-shadow(0 0 10px rgba(255,255,255,0.8))" }}
@@ -65,7 +65,7 @@ export default function Navbar() {
             <a
               key={item}
               href="#"
-              className={`text-xs font-semibold tracking-wider transition-colors relative z-10 ${
+              className={`text-xs font-bold tracking-wider transition-colors relative z-10 ${
                 item === "HOME"
                   ? "text-[#0d370e] border-b-2 border-[#0d370e] pb-0.5"
                   : "text-gray-800 hover:text-[#0d370e]"
@@ -97,7 +97,7 @@ export default function Navbar() {
             <a
               key={item}
               href="#"
-              className={`text-sm font-semibold tracking-wider ${
+              className={`text-sm font-bold tracking-wider ${
                 item === "HOME" ? "text-[#c9a84c]" : "text-white/80"
               }`}
             >
