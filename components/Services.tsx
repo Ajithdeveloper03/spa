@@ -8,7 +8,7 @@ const services = [
     title: "Professionally Trained Therapists",
     desc: "Experience deep relaxation with our certified reflexology experts.",
     icon: Flower,
-    img: "./OS%201.jpg",
+    img: "./OS%201.png",
   },
   {
     title: "Premium Wellness Experience",
@@ -38,7 +38,7 @@ const services = [
     title: "Convenient Locations",
     desc: "Easily accessible branches located in the heart of Mylapore and T. Nagar.",
     icon: Flame,
-    img: "./OS%201.jpg",
+    img: "./OS%201.png",
   },
   {
     title: "Easy Online Booking",

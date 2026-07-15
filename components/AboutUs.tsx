@@ -20,7 +20,7 @@ export default function AboutUs() {
         <div className="grid lg:grid-cols-2 gap-8 items-center">
           
           {/* Left Column: Images & Graphics */}
-          <div className="relative w-full max-w-[450px] mx-auto aspect-square sm:aspect-auto sm:h-[600px] lg:h-[650px] transform sm:scale-[0.85] lg:scale-[0.8] origin-center lg:origin-right mb-12 sm:mb-0">
+          <div className="relative w-full max-w-[450px] sm:max-w-none mx-auto sm:mx-0 aspect-square sm:aspect-auto sm:h-[600px] lg:h-[650px] transform sm:scale-[0.85] lg:scale-[0.8] origin-center lg:origin-right mb-12 sm:mb-0">
             {/* Top-Right Abstract Shape (Dark Blue + Orange curve) */}
             <div className="absolute -top-8 sm:-top-12 right-[10%] w-16 h-16 sm:w-24 sm:h-24 z-0 transform rotate-[15deg]">
               <svg viewBox="0 0 100 100" fill="none" className="w-full h-full opacity-90">
