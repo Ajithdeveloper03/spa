@@ -52,10 +52,10 @@ export default function VIPSuites() {
         </div>
 
         {/* Right Images (Overlapping Polaroids) */}
-        <div className="w-full lg:w-1/2 relative h-[400px] sm:h-[500px] lg:h-[500px] flex items-center justify-center mt-10 lg:mt-0 transform scale-90 lg:scale-[0.8]">
+        <div className="w-full lg:w-1/2 relative aspect-square sm:aspect-auto sm:h-[500px] flex items-center justify-center mt-10 lg:mt-0 transform lg:scale-[0.8] z-20">
           
           {/* Top/Back Polaroid */}
-          <div className="absolute top-0 lg:-top-4 left-0 lg:left-4 w-[65%] aspect-[4/3] bg-white p-3 sm:p-4 shadow-[0_20px_50px_rgba(0,0,0,0.2)] transform -rotate-3 transition-all duration-700 hover:-translate-y-3 hover:-rotate-1 z-10 group">
+          <div className="absolute top-0 lg:-top-4 left-0 lg:left-4 w-[70%] sm:w-[65%] aspect-[4/3] bg-white p-2 sm:p-4 shadow-[0_20px_50px_rgba(0,0,0,0.2)] transform -rotate-3 transition-all duration-700 hover:-translate-y-3 hover:-rotate-1 z-10 group">
             <div className="w-full h-full relative overflow-hidden bg-gray-200">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="./vip.png" alt="Relaxation" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
@@ -63,7 +63,7 @@ export default function VIPSuites() {
           </div>
 
           {/* Bottom/Front Polaroid */}
-          <div className="absolute bottom-0 lg:-bottom-4 right-0 lg:right-4 w-[65%] aspect-[4/3] bg-white p-3 sm:p-4 shadow-[0_20px_50px_rgba(0,0,0,0.25)] transform rotate-6 transition-all duration-700 hover:-translate-y-3 hover:rotate-3 z-20 group">
+          <div className="absolute bottom-0 lg:-bottom-4 right-0 lg:right-4 w-[70%] sm:w-[65%] aspect-[4/3] bg-white p-2 sm:p-4 shadow-[0_20px_50px_rgba(0,0,0,0.25)] transform rotate-6 transition-all duration-700 hover:-translate-y-3 hover:rotate-3 z-20 group">
             <div className="w-full h-full relative overflow-hidden bg-gray-200">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="./ABOUT%20US.png" alt="Spa Treatment" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />

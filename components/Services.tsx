@@ -55,6 +55,13 @@ export default function Services() {
   useEffect(() => {
     const handleScroll = () => {
       if (!targetRef.current || !sliderRef.current || !sliderRef.current.parentElement) return;
+      
+      // Disable scroll animation on mobile/tablet
+      if (window.innerWidth < 1024) {
+        sliderRef.current.style.transform = 'none';
+        return;
+      }
+
       const { top, height } = targetRef.current.getBoundingClientRect();
       const viewportHeight = window.innerHeight;
       
@@ -85,8 +92,8 @@ export default function Services() {
   }, []);
 
   return (
-    <section ref={targetRef} className="relative h-[300vh] bg-[#fcfaf7]">
-      <div className="sticky top-0 h-screen flex flex-col justify-center overflow-hidden py-16 lg:py-24">
+    <section ref={targetRef} className="relative lg:h-[300vh] bg-[#fcfaf7]">
+      <div className="lg:sticky lg:top-0 lg:h-screen flex flex-col justify-center overflow-hidden py-12 lg:py-24">
         <div className="max-w-[1400px] mx-auto w-full pl-6 lg:pl-10">
           
           {/* Heading */}
@@ -96,16 +103,16 @@ export default function Services() {
             </h2>
           </div>
 
-          {/* Slider Container */}
-          <div className="overflow-hidden w-full pb-12">
+          {/* Slider / Stack Container */}
+          <div className="w-full pb-6 lg:pb-12">
             <div 
               ref={sliderRef}
-              className="flex gap-6 w-max will-change-transform pr-6 lg:pr-10 pb-4"
+              className="flex flex-col lg:flex-row gap-8 lg:gap-6 lg:w-max pr-6 lg:pr-10 pb-4 lg:will-change-transform"
             >
               {services.map((s, i) => (
                 <div
                   key={i}
-                  className="relative rounded-[2rem] shadow-[0_10px_40px_rgba(0,0,0,0.08)] flex flex-col group shrink-0 w-[290px] sm:w-[340px] lg:w-[360px] h-[440px] sm:h-[480px] overflow-hidden"
+                  className="relative rounded-[2rem] shadow-[0_10px_40px_rgba(0,0,0,0.08)] flex flex-col group shrink-0 w-full sm:w-[400px] mx-auto lg:mx-0 lg:w-[360px] h-[400px] sm:h-[480px] overflow-hidden"
                 >
                   {/* Background Image (Full Size) */}
                   <div className="absolute inset-0 w-full h-full bg-gray-200">
@@ -158,9 +165,10 @@ export default function Services() {
           </div>
 
           {/* Indicator */}
-          <div className="pr-6 lg:pr-10 flex justify-end">
+          <div className="pr-6 lg:pr-10 flex justify-center lg:justify-end mt-4 lg:mt-0">
             <span className="text-gray-400 text-[11px] tracking-widest font-bold uppercase flex items-center gap-2">
-              KEEP SCROLLING &rarr;
+              <span className="lg:hidden">SCROLL DOWN TO EXPLORE &rarr;</span>
+              <span className="hidden lg:inline">KEEP SCROLLING &rarr;</span>
             </span>
           </div>
 

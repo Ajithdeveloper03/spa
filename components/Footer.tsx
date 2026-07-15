@@ -105,7 +105,7 @@ export default function Footer() {
       {/* CTA Bar */}
       <section className="bg-[#0a0805] py-6 border-b border-[#2a251d]">
         <div className="max-w-[1400px] mx-auto px-6 flex flex-col lg:flex-row items-center justify-between gap-8">
-          <div className="flex flex-col sm:flex-row items-center gap-8 lg:gap-16">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 sm:gap-8 lg:gap-16 w-full sm:w-auto">
             <div className="flex items-center gap-4">
               <Clock className="text-[#c9a84c]" size={30} strokeWidth={1.25} />
               <div>
@@ -143,7 +143,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <button className="flex items-center gap-2 bg-[#d6a54a] hover:bg-[#0d370e] hover:text-white text-black px-8 py-3.5 text-xs font-bold tracking-widest uppercase rounded-sm transition-colors">
+          <button className="flex items-center justify-center gap-2 bg-[#d6a54a] hover:bg-[#0d370e] hover:text-white text-black px-8 py-4 sm:py-3.5 text-xs font-bold tracking-widest uppercase rounded-sm transition-colors w-full sm:w-auto mt-6 lg:mt-0">
             <span>BOOK APPOINTMENT NOW</span>
             <ChevronRight size={16} strokeWidth={2.5} />
           </button>
