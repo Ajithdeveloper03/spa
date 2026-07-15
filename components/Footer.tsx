@@ -1,160 +1,134 @@
-'use client';
+"use client";
 
-import { useEffect, useRef } from 'react';
-import Image from 'next/image';
-import { Clock, PhoneCall, Phone, MessageCircle, MapPin, Mail, ArrowRight, Instagram, Facebook, Twitter } from 'lucide-react';
-import Link from 'next/link';
+import React from 'react';
+import { ArrowRight, Clock, Phone, MessageCircle, Mail, MapPin, Facebook, Instagram, Twitter } from 'lucide-react';
 
 export default function Footer() {
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) {
-            e.target.querySelectorAll('.reveal').forEach((el) => {
-              el.classList.add('visible');
-            });
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, []);
-
   return (
-    <footer id="contact" ref={ref} className="w-full bg-darkGreen-950">
-      
-      {/* Top Contact Bar */}
-      <div className="w-full border-t border-b border-darkGreen-800/50">
-        <div className="w-full max-w-[1400px] px-6 lg:px-12 mx-auto py-8">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-8 reveal">
+    <>
+      {/* Top Info Bar */}
+      <div className="bg-[#052b22] border-b border-white/10">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center py-6 px-6 gap-6">
+          <div className="flex flex-col md:flex-row gap-8 lg:gap-16 w-full lg:w-auto justify-between lg:justify-start">
+            <div className="flex items-center gap-4">
+              <Clock className="w-8 h-8 text-gold-500" strokeWidth={1.5} />
+              <div>
+                <p className="text-xs font-bold tracking-widest font-cormorant text-white mb-1">OPEN EVERYDAY</p>
+                <p className="text-white/80 font-montserrat text-sm">10:00 AM - 10:00 PM</p>
+              </div>
+            </div>
+            <div className="hidden md:block w-px h-10 bg-white/20"></div>
             
             <div className="flex items-center gap-4">
-              <Clock className="w-6 h-6 text-gold-500" />
+              <Phone className="w-8 h-8 text-gold-500" strokeWidth={1.5} />
               <div>
-                <p className="font-montserrat text-xs font-bold text-cream uppercase tracking-widest">OPEN EVERYDAY</p>
-                <p className="font-montserrat text-sm text-gold-400">10:00 AM - 10:00 PM</p>
+                <p className="text-xs font-bold tracking-widest font-cormorant text-white mb-1">CALL US</p>
+                <p className="text-white/80 font-montserrat text-sm">+91 90030 10888</p>
               </div>
             </div>
-
-            <div className="hidden lg:block w-px h-10 bg-darkGreen-800" />
+            <div className="hidden md:block w-px h-10 bg-white/20"></div>
 
             <div className="flex items-center gap-4">
-              <PhoneCall className="w-6 h-6 text-gold-500" />
+              <MessageCircle className="w-8 h-8 text-gold-500" strokeWidth={1.5} />
               <div>
-                <p className="font-montserrat text-xs font-bold text-cream uppercase tracking-widest">CALL US</p>
-                <p className="font-montserrat text-sm text-gold-400">+91 90030 10888</p>
+                <p className="text-xs font-bold tracking-widest font-cormorant text-white mb-1">WHATSAPP US</p>
+                <p className="text-white/80 font-montserrat text-sm">+91 90030 10888</p>
               </div>
             </div>
-
-            <div className="hidden lg:block w-px h-10 bg-darkGreen-800" />
-
-            <div className="flex items-center gap-4">
-              <MessageCircle className="w-6 h-6 text-gold-500" />
-              <div>
-                <p className="font-montserrat text-xs font-bold text-cream uppercase tracking-widest">WHATSAPP US</p>
-                <p className="font-montserrat text-sm text-gold-400">+91 90030 10888</p>
-              </div>
-            </div>
-
-            <button className="flex items-center gap-3 px-8 py-4 bg-gold-600 hover:bg-gold-500 text-white font-montserrat text-xs font-bold uppercase tracking-widest rounded-sm transition-all duration-300">
-              BOOK APPOINTMENT NOW
-              <ArrowRight className="w-4 h-4" />
-            </button>
-            
           </div>
+
+          <button className="bg-[#b37a4c] font-montserrat text-white px-8 py-3 rounded hover:bg-[#9c6a42] font-bold text-xs tracking-widest transition-colors flex items-center gap-2">
+            BOOK APPOINTMENT NOW <ArrowRight className="w-4 h-4" />
+          </button>
         </div>
       </div>
 
-      {/* Main Footer Links */}
-      <div className="w-full max-w-[1400px] px-6 lg:px-12 mx-auto py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 reveal delay-100">
+      {/* Main Footer */}
+      <footer className="bg-[#043329] text-white py-16 px-6 font-montserrat">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           
-          {/* Brand */}
-          <div className="flex flex-col items-start">
-            <Link href="#hero" className="flex items-center mb-6">
-              <div className="relative w-44 h-52">
-                <Image src="/logo.png" alt="Foot Pulse Logo" fill className="object-contain brightness-0 invert" />
-              </div>
-            </Link>
-            <p className="font-montserrat text-sm font-medium text-cream/80 leading-relaxed max-w-sm">
+          {/* Column 1 */}
+          <div className="flex flex-col gap-4">
+            <div className="bg-white p-2 rounded-xl w-max shadow-lg mb-2">
+              <img src="/foot-pulse/logo.png" alt="Foot Pulse Logo" className="w-40 md:w-48 h-14 object-contain" />
+            </div>
+            <p className="text-white/80 text-sm leading-relaxed pr-4">
               Your ultimate destination for luxury foot reflexology. Step into a world of pure relaxation, wellness, and expert care.
             </p>
-          </div>
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="font-montserrat text-sm font-bold text-gold-500 uppercase mb-6">QUICK LINKS</h4>
-            <ul className="space-y-4">
-              {['Home', 'About Us', 'Services', 'VIP Suites', 'Gallery', 'Contact Us'].map((link) => (
-                <li key={link}>
-                  <Link href={`#${link.toLowerCase().replace(' ', '-')}`} className="font-montserrat text-sm font-medium text-cream/70 hover:text-gold-500 transition-colors">
-                    {link}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Our Services */}
-          <div>
-            <h4 className="font-montserrat text-sm font-bold text-gold-500 uppercase mb-6">OUR SERVICES</h4>
-            <ul className="space-y-4">
-              {[
-                'Luxury Foot Reflexology',
-                'Stress Relief Therapy',
-                'Sleep Wellness Therapy',
-                'VIP Private Suites',
-                'Pressure Reflection Experience',
-              ].map((service) => (
-                <li key={service}>
-                  <Link href="#services" className="font-montserrat text-sm font-medium text-cream/70 hover:text-gold-500 transition-colors">
-                    {service}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Contact Info */}
-          <div>
-            <h4 className="font-montserrat text-sm font-bold text-gold-500 uppercase mb-6">CONTACT US</h4>
-            <ul className="space-y-5">
-              <li className="flex items-start gap-4">
-                <MapPin className="w-5 h-5 text-gold-500 mt-1 shrink-0" />
-                <span className="font-montserrat text-sm font-medium text-cream/70 leading-relaxed">
-                  No 123, Anna Salai, Chennai,<br />Tamil Nadu - 600002
-                </span>
-              </li>
-              <li className="flex items-center gap-4">
+            <div className="flex flex-col gap-4 mt-2">
+              <div className="flex gap-4 items-center text-white/80 text-sm">
                 <Phone className="w-5 h-5 text-gold-500 shrink-0" />
-                <span className="font-montserrat text-sm font-medium text-cream/70">+91 90030 10888</span>
-              </li>
-              <li className="flex items-center gap-4">
+                <p>+91 90030 10888</p>
+              </div>
+              <div className="flex gap-4 items-center text-white/80 text-sm">
                 <Mail className="w-5 h-5 text-gold-500 shrink-0" />
-                <span className="font-montserrat text-sm font-medium text-cream/70">info@footpulsewellness.com</span>
-              </li>
-            </ul>
+                <p>info@footpulsewellness.com</p>
+              </div>
+            </div>
 
-            {/* Social Links */}
-            <div className="flex gap-4 mt-8">
-              <Link href="#" className="w-10 h-10 rounded-full border-2 border-darkGreen-800 flex items-center justify-center text-cream/70 hover:bg-gold-500 hover:text-white hover:border-gold-500 transition-all">
-                <Facebook className="w-5 h-5" />
-              </Link>
-              <Link href="#" className="w-10 h-10 rounded-full border-2 border-darkGreen-800 flex items-center justify-center text-cream/70 hover:bg-gold-500 hover:text-white hover:border-gold-500 transition-all">
-                <Instagram className="w-5 h-5" />
-              </Link>
-              <Link href="#" className="w-10 h-10 rounded-full border-2 border-darkGreen-800 flex items-center justify-center text-cream/70 hover:bg-gold-500 hover:text-white hover:border-gold-500 transition-all">
-                <Twitter className="w-5 h-5" />
-              </Link>
+            {/* Social Icons */}
+            <div className="flex gap-4 mt-4">
+              <a href="#" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-gold-500 hover:text-[#043329] hover:border-gold-500 transition-all">
+                <Facebook className="w-4 h-4" />
+              </a>
+              <a href="#" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-gold-500 hover:text-[#043329] hover:border-gold-500 transition-all">
+                <Instagram className="w-4 h-4" />
+              </a>
+              <a href="#" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-gold-500 hover:text-[#043329] hover:border-gold-500 transition-all">
+                <Twitter className="w-4 h-4" />
+              </a>
             </div>
           </div>
+
+          {/* Column 2 */}
+          <div>
+            <h3 className="text-gold-500 font-bold mb-6 tracking-wide text-sm">QUICK LINKS</h3>
+            <ul className="space-y-4 text-white/80 text-sm">
+              <li><a href="#" className="hover:text-gold-400 transition-colors">Home</a></li>
+              <li><a href="#" className="hover:text-gold-400 transition-colors">About Us</a></li>
+              <li><a href="#" className="hover:text-gold-400 transition-colors">Services</a></li>
+              <li><a href="#" className="hover:text-gold-400 transition-colors">VIP Suites</a></li>
+              <li><a href="#" className="hover:text-gold-400 transition-colors">Gallery</a></li>
+              <li><a href="#" className="hover:text-gold-400 transition-colors">Contact Us</a></li>
+            </ul>
+          </div>
+
+          {/* Column 3 */}
+          <div>
+            <h3 className="text-gold-500 font-bold mb-6 tracking-wide text-sm">OUR SERVICES</h3>
+            <ul className="space-y-4 text-white/80 text-sm">
+              <li><a href="#" className="hover:text-gold-400 transition-colors">Luxury Foot Reflexology</a></li>
+              <li><a href="#" className="hover:text-gold-400 transition-colors">Stress Relief Therapy</a></li>
+              <li><a href="#" className="hover:text-gold-400 transition-colors">Sleep Wellness Therapy</a></li>
+              <li><a href="#" className="hover:text-gold-400 transition-colors">VIP Private Suites</a></li>
+              <li><a href="#" className="hover:text-gold-400 transition-colors">Pressure Reflection Experience</a></li>
+            </ul>
+          </div>
+
+          {/* Column 4 */}
+          <div>
+            <h3 className="text-gold-500 font-bold mb-6 tracking-wide text-sm">LOCATIONS</h3>
+            <ul className="space-y-6 text-white/80 text-sm">
+              <li className="flex gap-4 items-start">
+                <MapPin className="w-5 h-5 text-gold-500 shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-bold text-white mb-1">Mylapore Branch</p>
+                  <p className="leading-relaxed text-xs">No. 2 & 3, Bishop Wallers Avenue East, C.I.T. Colony, Mylapore, Chennai – 600004<br/>(Opposite Hotel Savera & Near Tamil Koodam Mess)</p>
+                </div>
+              </li>
+              <li className="flex gap-4 items-start">
+                <MapPin className="w-5 h-5 text-gold-500 shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-bold text-white mb-1">T. Nagar Branch</p>
+                  <p className="leading-relaxed text-xs">No. 147, 2nd Floor, Sucans Sivagami Square, G.N. Chetty Road, T. Nagar, Chennai – 600017<br/>(Opposite Virudhunagar Hotel & Near Saravana Stores)</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          
         </div>
-      </div>
-    </footer>
+      </footer>
+    </>
   );
 }
