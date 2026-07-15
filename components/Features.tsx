@@ -35,7 +35,7 @@ const features = [
 
 export default function Features() {
   return (
-    <section className="w-full bg-cream py-8 sm:py-12">
+    <section className="w-full bg-gold-100 py-8 sm:py-12">
       <div className="w-full max-w-[1400px] px-4 sm:px-6 lg:px-12 mx-auto">
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 sm:gap-8 text-center">
           {features.map((feature, idx) => {

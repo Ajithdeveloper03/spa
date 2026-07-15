@@ -7,31 +7,31 @@ const services = [
   {
     title: 'PREMIUM\nRELAXATION',
     description: 'A perfect blend of ambience, expert touch and luxury wellness care.',
-    image: '/foot-pulse/OS 1.jpg',
+    image: '/OS 1.jpg',
     icon: '❀'
   },
   {
     title: 'STRESS RELIEF\nREFLEXOLOGY',
     description: 'Deep pressure therapy to release stress and rejuvenate body energy.',
-    image: '/foot-pulse/OS 2.png',
+    image: '/OS 2.png',
     icon: '✦'
   },
   {
     title: 'DEEP TISSUE\nRESTORATION',
     description: 'Focuses on realigning deep layers of muscles and connective tissue.',
-    image: '/foot-pulse/OS 3.png',
+    image: '/OS 3.png',
     icon: '❂'
   },
   {
     title: 'VIP SUITES\nEXPERIENCE',
     description: 'Exclusive private suites with customized spa wellness treatments.',
-    image: '/foot-pulse/OS 4.png',
+    image: '/OS 4.png',
     icon: '❀'
   },
   {
     title: 'PREMIUM\nRELAXATION',
     description: 'A perfect blend of ambience, expert touch and luxury wellness care.',
-    image: '/foot-pulse/OS 1.jpg',
+    image: '/OS 1.jpg',
     icon: '❀'
   }
 ];

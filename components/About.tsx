@@ -60,7 +60,7 @@ export default function About() {
 
             <button
               onClick={() => { const el = document.querySelector('#contact'); if (el) el.scrollIntoView({ behavior: 'smooth' }); }}
-              className="px-8 py-4 bg-gold-600 hover:bg-gold-500 text-[#004d40] font-montserrat text-sm font-bold uppercase rounded-sm transition-all duration-300 shadow-xl hover:-translate-y-1"
+              className="px-8 py-4 bg-gold-600 hover:bg-gold-500 text-white font-montserrat text-sm font-bold uppercase rounded-sm transition-all duration-300 shadow-xl hover:-translate-y-1"
             >
               KNOW MORE ABOUT US
             </button>

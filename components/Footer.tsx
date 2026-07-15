@@ -61,7 +61,7 @@ export default function Footer() {
               </div>
             </div>
 
-            <button className="flex items-center gap-3 px-8 py-4 bg-gold-600 hover:bg-gold-500 text-[#004d40] font-montserrat text-xs font-bold uppercase tracking-widest rounded-sm transition-all duration-300">
+            <button className="flex items-center gap-3 px-8 py-4 bg-gold-600 hover:bg-gold-500 text-white font-montserrat text-xs font-bold uppercase tracking-widest rounded-sm transition-all duration-300">
               BOOK APPOINTMENT NOW
               <ArrowRight className="w-4 h-4" />
             </button>
@@ -78,7 +78,7 @@ export default function Footer() {
           <div className="flex flex-col items-start">
             <Link href="#hero" className="flex items-center mb-6">
               <div className="relative w-44 h-52">
-                <Image src="/foot-pulse/logo.png" alt="Foot Pulse Logo" fill className="object-contain brightness-0 invert" />
+                <Image src="/logo.png" alt="Foot Pulse Logo" fill className="object-contain brightness-0 invert" />
               </div>
             </Link>
             <p className="font-montserrat text-sm font-medium text-cream/80 leading-relaxed max-w-sm">

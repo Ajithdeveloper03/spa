@@ -24,7 +24,7 @@ export default function Navbar() {
         <div className="flex items-center shrink-0">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/foot-pulse/logo.png"
+            src="/logo.png"
             alt="Foot Pulse Reflexology"
             className="h-14 sm:h-18 lg:h-22 w-auto object-contain brightness-0 invert drop-shadow-md relative z-10"
           />
@@ -45,7 +45,7 @@ export default function Navbar() {
 
         {/* Right side */}
         <div className="flex items-center gap-3">
-          <button className="hidden sm:block border-2 border-gold-500 text-gold-400 px-5 py-2.5 text-xs font-bold tracking-widest hover:bg-gold-500 hover:text-[#004d40] transition-colors rounded-sm uppercase">
+          <button className="hidden sm:block border-2 border-gold-500 text-gold-400 px-5 py-2.5 text-xs font-bold tracking-widest hover:bg-gold-500 hover:text-white transition-colors rounded-sm uppercase">
             BOOK APPOINTMENT
           </button>
           <button
@@ -76,7 +76,7 @@ export default function Navbar() {
               {item}
             </a>
           ))}
-          <button className="mt-4 bg-gold-600 text-[#004d40] px-4 py-3 text-sm font-bold tracking-widest text-center rounded-sm">
+          <button className="mt-4 bg-gold-600 text-white px-4 py-3 text-sm font-bold tracking-widest text-center rounded-sm">
             BOOK APPOINTMENT
           </button>
         </div>

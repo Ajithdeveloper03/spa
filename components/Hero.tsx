@@ -59,7 +59,7 @@ export default function Hero() {
             <br className="sm:hidden" />
             &nbsp;<span className="text-gold-500 sm:inline">•</span>&nbsp;Restore
           </h1>
-          <p className="font-cormorant text-gold-400 text-xl sm:text-2xl md:text-4xl mb-8 font-bold drop-shadow-md leading-snug">
+          <p className="font-montserrat text-gold-400 text-xl sm:text-2xl md:text-4xl mb-8 font-bold drop-shadow-md leading-snug">
             Luxury Foot Reflexology
             <br />With Exclusive VIP Suites
           </p>
@@ -74,12 +74,12 @@ export default function Hero() {
             </div>
             <div className="w-1.5 h-1.5 rounded-full bg-gold-500/50" />
             <div className="flex items-center gap-2">
-              
+              <CheckCircle2 className="w-5 h-5 text-gold-500 shrink-0" />
               <span className="font-montserrat text-cream text-lg font-medium">Improve Sleep</span>
             </div>
             <div className="w-1.5 h-1.5 rounded-full bg-gold-500/50" />
             <div className="flex items-center gap-2">
-              
+              <CheckCircle2 className="w-5 h-5 text-gold-500 shrink-0" />
               <span className="font-montserrat text-cream text-base font-medium">Restore Energy</span>
             </div>
           </div>
@@ -87,7 +87,7 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
             <button
               onClick={() => handleScroll('#contact')}
-              className="flex items-center justify-center gap-2 px-6 py-3 bg-gold-600 hover:bg-gold-500 text-[#004d40] font-montserrat text-sm font-medium uppercase transition-all duration-300 shadow-xl hover:-translate-y-1 rounded-sm"
+              className="flex items-center justify-center gap-2 px-6 py-3 bg-gold-600 hover:bg-gold-500 text-white font-montserrat text-sm font-medium uppercase transition-all duration-300 shadow-xl hover:-translate-y-1 rounded-sm"
             >
               Book Appointment
               <Calendar className="w-4 h-4" />
