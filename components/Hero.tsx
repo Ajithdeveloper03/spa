@@ -4,9 +4,9 @@ import { useState, useEffect } from "react";
 import { Calendar, MessageCircle, Shield, Moon, Zap } from "lucide-react";
 
 const images = [
-  "./banner%201.png",
-  "./banner%202.png",
-  "./banner%203.png",
+  "/banner 1.png",
+  "/banner 2.png",
+  "/banner 3.png",
 ];
 
 const animatedWords = ["Recharge", "Restore"];
@@ -35,7 +35,6 @@ export default function Hero() {
       {/* Background image slider */}
       <div className="absolute inset-0 w-full h-full bg-[#1a1a1a]">
         {images.map((src, index) => (
-          /* eslint-disable-next-line @next/next/no-img-element */
           <img
             key={src}
             src={src}
@@ -53,14 +52,26 @@ export default function Hero() {
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-10 pb-24 pt-32 sm:pt-44">
         <div className="max-w-2xl">
           <h1 className="text-4xl sm:text-5xl md:text-[3.5rem] font-serif text-[#1a1a1a] leading-tight mb-4 flex flex-col items-start">
-            Feel the Pulse of
-            <span className="text-[#0d370e] mt-2">Healing & Relaxation</span>
+            <span>Relax</span>
+            <span className="relative h-[1.2em] w-full block mt-1 overflow-hidden text-[#0d370e]">
+              {animatedWords.map((word, index) => (
+                <span
+                  key={word}
+                  className={`absolute left-0 top-0 transition-all duration-700 ease-in-out ${
+                    index === currentWord
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 translate-y-4"
+                  }`}
+                >
+                  {word}
+                </span>
+              ))}
+            </span>
           </h1>
-          <p className="text-gray-700 text-sm sm:text-base md:text-lg max-w-xl mb-8 leading-relaxed">
-            South India's trusted reflexology hub, with fast-growing branches and a reputed destination for deeply healing wellness and relaxation.
-          </p>
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-serif text-[#c9a84c] leading-snug mb-8">
-            Premium Foot Reflexology & Wellness Experience
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif text-[#c9a84c] leading-snug mb-8">
+            Luxury Foot Reflexology
+            <br />
+            with Exclusive VIP Suites
           </h2>
 
           <hr className="border-gray-200 mb-8 max-w-[32rem]" />
