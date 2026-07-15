@@ -1,41 +1,48 @@
 "use client";
 
 import { useRef, useEffect } from "react";
-import { Moon, Crown, Flower2, Flower, Brain, Flame, Droplets } from "lucide-react";
+import { Moon, Crown, Flower2, Flower, Brain, Flame, Droplets, User, ChevronRight } from "lucide-react";
 
 const services = [
   {
-    title: "Professionally Trained Reflexology Therapists",
+    title: "Professionally Trained Therapists",
+    desc: "Experience deep relaxation with our certified reflexology experts.",
     icon: Flower,
     img: "./OS%201.jpg",
   },
   {
     title: "Premium Wellness Experience",
+    desc: "Immerse yourself in a calm, luxurious environment designed for your comfort.",
     icon: Brain,
     img: "./OS%202.png",
   },
   {
-    title: "Exclusive Couples Therapy Suite",
+    title: "Exclusive Couples Therapy",
+    desc: "Share the gift of relaxation with someone special in our private suites.",
     icon: Moon,
     img: "./OS%203.png",
   },
   {
     title: "Private VIP Therapy Suite",
+    desc: "Enjoy complete privacy and personalized care in our premium VIP rooms.",
     icon: Crown,
     img: "./OS%204.png",
   },
   {
-    title: "Clean, Hygienic & Comfortable Environment",
+    title: "Clean & Hygienic Environment",
+    desc: "We maintain the highest standards of cleanliness for a safe and peaceful escape.",
     icon: Flower2,
     img: "./OS%205.png",
   },
   {
-    title: "Convenient Locations in Mylapore & T. Nagar",
+    title: "Convenient Locations",
+    desc: "Easily accessible branches located in the heart of Mylapore and T. Nagar.",
     icon: Flame,
     img: "./OS%201.jpg",
   },
   {
-    title: "Easy Online Booking & Digital Payments",
+    title: "Easy Online Booking",
+    desc: "Schedule your wellness session effortlessly with our digital booking system.",
     icon: Droplets,
     img: "./OS%202.png",
   },
@@ -90,18 +97,18 @@ export default function Services() {
           </div>
 
           {/* Slider Container */}
-          <div className="overflow-hidden w-full pb-8">
+          <div className="overflow-hidden w-full pb-12">
             <div 
               ref={sliderRef}
-              className="flex gap-6 w-max will-change-transform pr-6 lg:pr-10"
+              className="flex gap-6 w-max will-change-transform pr-6 lg:pr-10 pb-4"
             >
               {services.map((s, i) => (
                 <div
                   key={i}
-                  className="relative rounded-3xl overflow-hidden flex flex-col group shrink-0 w-[280px] sm:w-[320px] lg:w-[360px] h-[320px] sm:h-[380px]"
+                  className="relative rounded-[2rem] shadow-[0_10px_40px_rgba(0,0,0,0.08)] flex flex-col group shrink-0 w-[290px] sm:w-[340px] lg:w-[360px] h-[440px] sm:h-[480px] overflow-hidden"
                 >
-                  {/* Background Image */}
-                  <div className="absolute inset-0 w-full h-full">
+                  {/* Background Image (Full Size) */}
+                  <div className="absolute inset-0 w-full h-full bg-gray-200">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={s.img}
@@ -111,31 +118,38 @@ export default function Services() {
                     />
                   </div>
                   
-                  {/* Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-90 transition-opacity duration-500 group-hover:opacity-100"></div>
+                  {/* Gradient Overlay for Text Readability */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500 z-0"></div>
 
-                  {/* Number Watermark */}
-                  <div className="absolute top-10 right-6 text-white/20 font-bold text-7xl font-serif pointer-events-none transition-all duration-500 group-hover:-translate-y-2 group-hover:text-white/30">
-                    0{i + 1}
+                  {/* Top Right Box */}
+                  <div className="absolute top-6 right-6 w-12 h-12 bg-white rounded flex items-center justify-center transition-colors duration-500 group-hover:bg-[#0d370e] z-10 shadow-lg">
+                    <s.icon
+                      className="text-[#c9a84c] group-hover:text-white transition-colors duration-500"
+                      size={24}
+                      strokeWidth={1.5}
+                    />
                   </div>
 
-                  {/* Content */}
-                  <div className="relative mt-auto p-6 lg:p-8 flex flex-col">
-                    {/* Accent Line */}
-                    <div className="w-10 h-1 bg-[#c9a84c] rounded-full mb-6"></div>
+                  {/* Content Overlay */}
+                  <div className="relative z-10 flex flex-col p-6 sm:p-8 flex-grow h-full justify-end">
                     
-                    {/* Icon and Title */}
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded-xl border border-[#c9a84c]/30 bg-[#c9a84c]/10 flex items-center justify-center shrink-0 backdrop-blur-md">
-                        <s.icon
-                          className="text-[#c9a84c]"
-                          size={24}
-                          strokeWidth={1.5}
-                        />
-                      </div>
-                      <h3 className="text-white text-base sm:text-lg font-bold leading-tight">
+                    {/* Bottom Row: Title & Number */}
+                    <div className="mt-auto flex items-end justify-between w-full">
+                      {/* Title */}
+                      <h3 className="text-white text-xl sm:text-2xl font-bold leading-tight mb-1 max-w-[80%] drop-shadow-md">
                         {s.title}
                       </h3>
+
+                      {/* Large Outlined Number */}
+                      <div 
+                        className="text-4xl sm:text-6xl font-serif font-bold tracking-tighter"
+                        style={{ 
+                          WebkitTextStroke: '1px rgba(255, 255, 255, 0.4)',
+                          WebkitTextFillColor: 'transparent'
+                        }}
+                      >
+                        0{i + 1}
+                      </div>
                     </div>
                   </div>
                 </div>

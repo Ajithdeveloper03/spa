@@ -16,17 +16,89 @@ export default function Footer() {
   return (
     <>
       {/* Journey to Wellness Section */}
-      <section className="bg-[#120e0a] py-16 lg:py-20 text-center px-6">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-serif text-white mb-6">
-            Your Journey to Wellness Starts Here
-          </h2>
-          <p className="text-white/70 text-sm md:text-base leading-relaxed mb-8">
-            Step into FOOT PULSE Wellness & Reflexology and discover a place where professional care, comfort, and relaxation come together. Let us help you feel lighter, calmer, and revitalized — one step at a time. Book your appointment today and experience the healing touch of FOOT PULSE.
-          </p>
-          <button className="bg-[#c9a84c] hover:bg-[#0d370e] hover:text-white text-black px-8 py-3.5 text-xs font-bold tracking-widest uppercase rounded-sm transition-colors">
-            BOOK YOUR APPOINTMENT TODAY
-          </button>
+      <section className="bg-[#120e0a] py-16 lg:py-24 px-6 relative overflow-hidden">
+        <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row items-start justify-center gap-12 lg:gap-16">
+          
+          {/* Left Content */}
+          <div className="w-full lg:w-1/2 max-w-[550px] text-left z-10">
+            <h2 className="text-3xl md:text-5xl lg:text-[3.25rem] font-serif text-white mb-6 leading-[1.15]">
+              Your Journey to Wellness Starts Here
+            </h2>
+            <p className="text-white/70 text-sm md:text-base leading-[1.8] mb-8">
+              Step into FOOT PULSE Wellness & Reflexology and discover a place where professional care, comfort, and relaxation come together. Let us help you feel lighter, calmer, and revitalized — one step at a time. Book your appointment today and experience the healing touch of FOOT PULSE.
+            </p>
+            <button className="bg-[#c9a84c] hover:bg-[#0d370e] hover:text-white text-black px-8 py-4 text-xs font-bold tracking-[0.2em] uppercase rounded-sm transition-colors inline-flex items-center gap-2 mb-10">
+              BOOK YOUR APPOINTMENT TODAY
+            </button>
+
+            {/* Visit Us Section */}
+            <div className="pt-8 border-t border-[#2a221a]">
+              <h3 className="text-2xl font-serif text-white mb-6">Visit Us</h3>
+              
+              <div className="grid sm:grid-cols-2 gap-8">
+                <div>
+                  <h4 className="text-[#c9a84c] text-xs font-bold tracking-[0.15em] uppercase mb-3 flex items-center gap-2">
+                    <MapPin size={14} /> Mylapore Branch
+                  </h4>
+                  <p className="text-white/70 text-[13px] leading-relaxed pr-4">
+                    No. 2 & 3, Bishop Wallers Avenue East, C.I.T. Colony, Mylapore, Chennai – 600004
+                  </p>
+                </div>
+                
+                <div>
+                  <h4 className="text-[#c9a84c] text-xs font-bold tracking-[0.15em] uppercase mb-3 flex items-center gap-2">
+                    <MapPin size={14} /> T. Nagar Branch
+                  </h4>
+                  <p className="text-white/70 text-[13px] leading-relaxed pr-4">
+                    No. 147, 2nd Floor, Sucans Sivagami Square, G.N. Chetty Road, T. Nagar, Chennai – 600017
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Form */}
+          <div className="w-full lg:w-1/2 max-w-lg z-10">
+            <div className="bg-[#1a140f] p-8 sm:p-10 rounded-2xl border border-[#2a221a] shadow-2xl">
+              <h3 className="text-2xl font-serif text-white mb-6">Send us a message</h3>
+              <form className="flex flex-col gap-4">
+                <input 
+                  type="text" 
+                  placeholder="Your Name" 
+                  className="w-full bg-[#120e0a] border border-[#2a221a] text-white px-5 py-4 rounded-lg focus:outline-none focus:border-[#c9a84c] transition-colors placeholder:text-gray-600" 
+                />
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <input 
+                    type="text" 
+                    placeholder="Age" 
+                    className="w-full sm:w-1/3 bg-[#120e0a] border border-[#2a221a] text-white px-5 py-4 rounded-lg focus:outline-none focus:border-[#c9a84c] transition-colors placeholder:text-gray-600" 
+                  />
+                  <input 
+                    type="tel" 
+                    placeholder="Contact Number" 
+                    className="w-full sm:w-2/3 bg-[#120e0a] border border-[#2a221a] text-white px-5 py-4 rounded-lg focus:outline-none focus:border-[#c9a84c] transition-colors placeholder:text-gray-600" 
+                  />
+                </div>
+                <input 
+                  type="email" 
+                  placeholder="Your Email" 
+                  className="w-full bg-[#120e0a] border border-[#2a221a] text-white px-5 py-4 rounded-lg focus:outline-none focus:border-[#c9a84c] transition-colors placeholder:text-gray-600" 
+                />
+                <textarea 
+                  placeholder="Your Message" 
+                  rows={4} 
+                  className="w-full bg-[#120e0a] border border-[#2a221a] text-white px-5 py-4 rounded-lg focus:outline-none focus:border-[#c9a84c] transition-colors resize-none placeholder:text-gray-600"
+                ></textarea>
+                <button 
+                  type="submit" 
+                  className="w-full bg-[#c9a84c] hover:bg-[#0d370e] hover:text-white text-black py-4 text-xs font-bold tracking-[0.2em] uppercase rounded-lg transition-colors mt-2"
+                >
+                  SEND MESSAGE
+                </button>
+              </form>
+            </div>
+          </div>
+
         </div>
       </section>
 

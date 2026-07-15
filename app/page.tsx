@@ -4,7 +4,7 @@ import AboutUs from "@/components/AboutUs";
 import Services from "@/components/Services";
 import VIPSuites from "@/components/VIPSuites";
 import ExperienceTogether from "@/components/ExperienceTogether";
-import Testimonials from "@/components/Testimonials";
+
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -17,7 +17,7 @@ export default function Home() {
         <Services />
         <VIPSuites />
         <ExperienceTogether />
-        <Testimonials />
+
         <Footer />
       </main>
     </div>
