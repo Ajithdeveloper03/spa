@@ -71,7 +71,7 @@ export default function Navbar() {
         <div className={styles.logoWrap}>
           <Link href="/" className={styles.logo}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/logo.png" alt="FOOT PULSE" className={styles.logoImg} />
+            <img src="/footref/logo.png" alt="FOOT PULSE" className={styles.logoImg} />
           </Link>
         </div>
 

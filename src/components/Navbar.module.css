@@ -48,7 +48,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 1.5rem;
+  gap: 1rem; /* tight grouping — links + button stay close together */
 }
 
 .navLink {
@@ -139,8 +139,8 @@
 .navActions {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  margin-left: auto;
+  gap: 0.8rem;
+  /* no margin-left: auto — button stays adjacent to the nav links */
 }
 
 /* ---- Book CTA ---- */

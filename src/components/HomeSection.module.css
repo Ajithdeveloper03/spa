@@ -34,9 +34,9 @@
   max-width: 800px;
   width: 100%;
   margin: 0 auto;
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(0, 0, 0, 0.322);
+  backdrop-filter: blur(42px);
+  -webkit-backdrop-filter: blur(42px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   padding: 4rem;
   border-radius: 12px; /* rounded corner boxes! */
@@ -69,7 +69,7 @@
 .desc {
   font-family: var(--font-sans);
   font-size: clamp(0.9rem, 1.8vw, 1.05rem);
-  font-weight: 300;
+  font-weight: 500;
   color: rgba(255, 255, 255, 0.95);
   line-height: 1.8;
   margin-bottom: 1.2rem;
@@ -90,9 +90,10 @@
   font-size: 0.78rem;
   font-weight: 600;
   letter-spacing: 0.2rem;
-  color: #ffffff;
+  color: var(--clr-dark-green);
   border: 1px solid #ffffff;
   padding: 1rem 3rem;
+  background: #ffffff;
   transition: all 0.35s ease;
   text-transform: uppercase;
 }

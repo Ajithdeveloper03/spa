@@ -78,8 +78,8 @@
 
 .bookBtn {
   border: 1px solid #ffffff;
-  color: #ffffff;
-  background: transparent;
+   background: #ffffff;
+  color: #3f5747; /* match theme dark green */
   padding: 1rem 3rem;
   font-family: var(--font-sans);
   font-size: 0.9rem;

@@ -20,7 +20,7 @@ export default function Hero() {
       {/* Background Video */}
       <video
         ref={videoRef}
-        src="/hero.mp4"
+        src="/footref/hero.mp4"
         loop
         muted
         playsInline

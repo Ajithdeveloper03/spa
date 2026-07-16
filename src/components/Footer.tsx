@@ -11,7 +11,7 @@ export default function Footer() {
         {/* Column 1: Brand Info */}
         <div className={styles.colInfo}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/logo.png" alt="FOOT PULSE Logo" className={styles.logoImg} />
+          <img src="/footref/logo.png" alt="FOOT PULSE Logo" className={styles.logoImg} />
           <p className={styles.brandDesc}>
             FOOT PULSE Wellness & Reflexology is South India’s trusted reflexology hub and premier destination for deeply healing wellness and relaxation. Combining the art of reflexology with a calm, luxurious environment, our expertly trained therapists provide personalized care to help you unwind, recharge, and restore balance.
           </p>
