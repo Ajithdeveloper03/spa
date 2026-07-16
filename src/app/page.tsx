@@ -4,9 +4,8 @@ import Welcome from "@/components/Welcome";
 import Services from "@/components/Services";
 import SpaSchool from "@/components/SpaSchool";
 import HomeSection from "@/components/HomeSection";
-import Partners from "@/components/Partners";
+// import Partners from "@/components/Partners";
 import Footer from "@/components/Footer";
-import ChatButton from "@/components/ChatButton";
 
 export default function HomePage() {
   return (
@@ -17,9 +16,9 @@ export default function HomePage() {
       <Services />
       <SpaSchool />
       <HomeSection />
-      <Partners />
+      {/* <Partners /> */}
       <Footer />
-      <ChatButton />
     </main>
   );
 }
+

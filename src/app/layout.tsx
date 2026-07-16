@@ -2,15 +2,15 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Serene Oasis Spa | Luxury Wellness & Spa Thailand",
+  title: "FOOT PULSE | Premium Foot Reflexology & Wellness Spa Chennai",
   description:
-    "Experience the pinnacle of luxury wellness at Serene Oasis Spa. Professional excellence meets compassionate care in the world of wellness. Book your spa experience today.",
+    "South India’s trusted reflexology hub in Mylapore & T. Nagar. Experience professional foot reflexology, couples therapy, and premium VIP spa treatment. Book your wellness journey today.",
   keywords:
-    "luxury spa, Thai massage, wellness, spa treatment, spa packages, Bangkok spa",
+    "foot reflexology, foot massage Chennai, spa Mylapore, spa T. Nagar, VIP couples suite, wellness center",
   openGraph: {
-    title: "Serene Oasis Spa | Luxury Wellness & Spa Thailand",
+    title: "FOOT PULSE | Premium Foot Reflexology & Wellness Spa Chennai",
     description:
-      "Where professional excellence meets the art of compassionate care in the world of wellness.",
+      "South India’s trusted reflexology hub in Mylapore & T. Nagar. Experience professional foot reflexology, couples therapy, and premium VIP spa treatment.",
     type: "website",
   },
 };
