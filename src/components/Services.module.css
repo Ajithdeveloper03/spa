@@ -1,0 +1,166 @@
+/* ---- Scroll Layout ---- */
+.scrollWrapper {
+  background: var(--clr-cream);
+  height: 300vh; /* creates scrolling area */
+  position: relative;
+}
+
+.stickyContainer {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: var(--nav-height);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+  padding: 0 2rem;
+  flex-shrink: 0;
+}
+
+/* ---- Horizontal Track ---- */
+.horizontalTrack {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 2.5rem;
+  padding: 0 4rem;
+  width: max-content;
+  /* Will-change helps with smooth transform performance */
+  will-change: transform;
+}
+
+.cardWrapper {
+  width: 480px; /* Fixed width for each card so layout doesn't break */
+  flex-shrink: 0;
+}
+
+/* ---- Card ---- */
+.card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  aspect-ratio: 4 / 3;
+  display: block;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: absolute;
+  inset: 0;
+  transition: transform 0.7s ease;
+}
+.card:hover img {
+  transform: scale(1.08);
+}
+
+.cardOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.35s;
+}
+.card:hover .cardOverlay {
+  background: rgba(0, 0, 0, 0.32);
+}
+
+.cardLabel {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #fff;
+  border: 1.5px solid rgba(255, 255, 255, 0.85);
+  padding: 0.6rem 1.5rem;
+  background: rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(2px);
+  transition: all 0.3s;
+  text-align: center;
+  max-width: 85%;
+  line-height: 1.4;
+}
+.card:hover .cardLabel {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: #fff;
+}
+
+/* ---- Emblem ---- */
+.emblemWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 3rem;
+}
+
+.emblem {
+  width: 68px;
+  height: 68px;
+  background: var(--clr-cream);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--clr-dark-green);
+  box-shadow: 0 0 0 5px var(--clr-cream), 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+.emblem svg {
+  width: 50px;
+  height: 50px;
+}
+
+/* ---- Responsive (Mobile Carousel) ---- */
+@media (max-width: 900px) {
+  .scrollWrapper {
+    height: auto;
+    padding: 4rem 0 5rem;
+  }
+  
+  .stickyContainer {
+    position: relative;
+    height: auto;
+    padding-top: 0;
+  }
+
+  .horizontalTrack {
+    /* override the JS transform explicitly using !important because it's set as inline style */
+    transform: none !important;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1.5rem;
+    padding: 1rem 2rem 2rem;
+    width: 100%;
+    /* hide scrollbars */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .horizontalTrack::-webkit-scrollbar {
+    display: none;
+  }
+
+  .cardWrapper {
+    /* Show most of the card, leaving a hint of the next */
+    width: 85vw;
+    scroll-snap-align: center;
+  }
+  
+  .emblemWrapper {
+    display: none; /* Hide emblem on mobile horizontal scroll to save space */
+  }
+}
+
+@media (max-width: 600px) {
+  .cardWrapper {
+    width: 90vw;
+  }
+}

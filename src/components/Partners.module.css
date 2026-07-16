@@ -1,0 +1,36 @@
+.section {
+  background: var(--clr-cream);
+  padding: 2.5rem 2rem;
+  border-top: 1px solid var(--clr-tan);
+}
+
+.track {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.logo {
+  background: #fff;
+  border-radius: 8px;
+  padding: 0.85rem 2rem;
+  min-width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.14em;
+  color: var(--clr-dark-green);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.logo:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  transform: translateY(-3px);
+}

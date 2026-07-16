@@ -1,49 +1,92 @@
+/* ================================================
+   SERENE OASIS SPA — Global CSS
+   ================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
+
+/* ---------- CSS Custom Properties ---------- */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --clr-dark-green: #2d4a3e;
+  --clr-mid-green:  #3d6b58;
+  --clr-sage:       #6b8f71;
+  --clr-sage-light: #8aab8e;
+  --clr-cream:      #f0ebe0;
+  --clr-beige:      #e8dfd0;
+  --clr-tan:        #d4c9b4;
+  --clr-orange:     #e06e2a;
+  --clr-gold:       #c9a84c;
+  --clr-white:      #ffffff;
+  --clr-text:       #2c2c2c;
+  --clr-text-light: #5a5a5a;
+
+  --font-serif:   'Cormorant Garamond', serif;
+  --font-sans:    'Montserrat', sans-serif;
+  --font-display: 'Playfair Display', serif;
+
+  --nav-height: 90px;
+  --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow-card: 0 8px 32px rgba(0,0,0,0.12);
+  --radius-card: 2px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/* ---------- Reset & Base ---------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html {
-  height: 100%;
-}
+html { scroll-behavior: smooth; font-size: 16px; }
 
-html,
 body {
-  max-width: 100vw;
+  font-family: var(--font-sans);
+  color: var(--clr-text);
+  background: var(--clr-cream);
   overflow-x: hidden;
+  line-height: 1.7;
 }
 
-body {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+img { max-width: 100%; height: auto; display: block; }
+a   { text-decoration: none; color: inherit; }
+button { cursor: pointer; border: none; background: none; font-family: inherit; }
+ul { list-style: none; }
+
+/* ---------- Scrollbar ---------- */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--clr-beige); }
+::-webkit-scrollbar-thumb { background: var(--clr-mid-green); border-radius: 3px; }
+
+/* ---------- Utility ---------- */
+.section-title-box {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--clr-dark-green);
+  border: 2px solid var(--clr-dark-green);
+  padding: 0.7rem 2.5rem;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+.section-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.discover-link {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--clr-dark-green);
+  border-bottom: 1px solid var(--clr-dark-green);
+  padding-bottom: 2px;
+  transition: color var(--transition), border-color var(--transition);
+  display: inline-block;
+}
+.discover-link:hover {
+  color: var(--clr-orange);
+  border-color: var(--clr-orange);
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+/* ---------- Scroll Reveal Defaults ---------- */
+/* Elements that will be revealed use inline style transitions.
+   We set the transition property on all animated elements globally. */
+[data-reveal] {
+  transition: opacity 0.8s ease, transform 0.8s ease;
 }

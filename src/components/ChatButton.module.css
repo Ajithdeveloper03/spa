@@ -1,0 +1,54 @@
+.wrap {
+  position: fixed;
+  bottom: 1.8rem;
+  right: 1.8rem;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.7rem;
+}
+
+.btn {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--clr-orange);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(224, 110, 42, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: pulse 3s infinite;
+  cursor: pointer;
+  border: none;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 28px rgba(224, 110, 42, 0.65);
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 4px 20px rgba(224, 110, 42, 0.5); }
+  50%       { box-shadow: 0 4px 32px rgba(224, 110, 42, 0.8); }
+}
+
+.tooltip {
+  background: var(--clr-dark-green);
+  color: #fff;
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  line-height: 1.5;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2);
+  white-space: nowrap;
+  animation: fadeIn 0.25s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

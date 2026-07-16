@@ -1,0 +1,47 @@
+.welcome {
+  background: var(--clr-dark-green);
+  text-align: center;
+  padding: 5.5rem 2rem;
+}
+
+.content {
+  max-width: 780px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.title {
+  font-family: var(--font-sans);
+  font-size: clamp(1.1rem, 2.4vw, 1.7rem);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--clr-cream);
+  margin-bottom: 1.4rem;
+}
+
+.divider {
+  width: 60px;
+  height: 2px;
+  background: var(--clr-gold);
+  margin: 0 auto 1.6rem;
+}
+
+.lead {
+  font-family: var(--font-serif);
+  font-size: clamp(1rem, 1.8vw, 1.22rem);
+  font-style: italic;
+  color: rgba(240, 235, 224, 0.92);
+  margin-bottom: 1.2rem;
+  line-height: 1.8;
+}
+
+.body {
+  font-size: 0.84rem;
+  font-weight: 300;
+  color: rgba(240, 235, 224, 0.65);
+  line-height: 2;
+  max-width: 620px;
+  margin: 0 auto;
+}
